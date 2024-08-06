@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('dark-mode-toggle');
     const body = document.body;
-    const audio = new Audio('"C:\Users\Giuli0\Documents\GitHub\mchcc.github.io\files\funny sound.ogg"'); // Specify the path to your sound file
 
     // Function to update the button label based on the current theme
     const updateButtonLabel = () => {
@@ -21,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
         }
         updateButtonLabel();
     };
