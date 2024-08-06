@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('dark-mode-toggle');
     const body = document.body;
+    const audio = new Audio('C:/Users/Giuli0/Documents/GitHub/mchcc.github.io/files/funny sound.ogg'); // Ensure the path to your sound file is correct
 
     // Function to update the button label based on the current theme
     const updateButtonLabel = () => {
@@ -49,3 +50,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the theme on page load
     loadSavedTheme();
 });
+
+// Apply the theme as soon as possible
+const applySavedTheme = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+};
+
+// Execute as soon as the script loads
+applySavedTheme();
