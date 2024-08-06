@@ -1,0 +1,349 @@
+/* Variables for light and dark modes */
+:root {
+    --background-color: #fafafa;
+    --text-color: #333333;
+    --header-footer-background: #e0e0e0;
+    --header-footer-text: #333333;
+    --link-hover-background: #d4d4d4;
+    --section-background: #ffffff;
+    --section-border: #cccccc;
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --liquidbounce-logo: url('/files/image.png');
+    --search-background: #ddd;
+    --search-text: #333;
+    --search-placeholder: #999;
+}
+
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #a3a3a3;
+    --header-footer-background: #1f1f1f;
+    --link-hover-background: #333;
+    --section-background: #1f1f1f;
+    --section-border: #333;
+    --box-shadow: rgba(255, 255, 255, 0.1);
+    --search-background: #333;
+    --search-text: #fff;
+    --search-placeholder: #ddd;
+}
+
+/* Basic styles */
+body, h1, h2, h3, p {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--background-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header and Footer */
+header, footer, #dark-mode-toggle, a[download], #download-src h2 {
+    background-color: var(--header-footer-background);
+    color: var(--header-footer-text);
+    transition: background-color 0.3s ease;
+}
+
+header, footer {
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px var(--box-shadow);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+/* Navigation */
+nav {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--header-footer-text);
+    transition: background-color 0.3s ease;
+}
+
+nav:hover .hamburger {
+    transform: rotate(90deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--header-footer-background);
+    box-shadow: 0 4px 6px var(--box-shadow);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    max-height: 0;
+}
+
+nav:hover .dropdown-content,
+#linux-box:hover + .dropdown-content,
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    max-height: 200px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: var(--header-footer-text);
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--link-hover-background);
+}
+
+/* Main and Sections */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--section-background);
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--section-border);
+    transition: background-color 0.3s, border 0.3s;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--section-border);
+    margin: 40px 0;
+}
+
+a[download] {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #3d6166;
+    background-color: var(--header-footer-background);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a[download]:hover {
+    background-color: var(--link-hover-background);
+}
+
+/* Existing styles for download links */
+#download-src {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--section-background);
+    padding: 20px;
+    border: 1px solid var(--section-border);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--box-shadow);
+    transition: background-color 0.3s, border 0.3s;
+}
+
+#download-src li a,
+#discord li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--text-color);
+    background-color: var(--header-footer-background);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#download-src li a:hover,
+#discord li a:hover {
+    background-color: var(--link-hover-background);
+}
+
+/* Styles for dark mode toggle button */
+#dark-mode-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--link-hover-background);
+}
+
+#linux-box,
+#linux-box + .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+#linux-box,
+a[linux-box] {
+    padding: 10px 20px;
+    color: var(--text-color);
+    background-color: var(--header-footer-background);
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#linux-box:hover,
+a[linux-box]:hover {
+    background-color: var(--link-hover-background);
+}
+
+/* Theme for the search box */
+#search {
+    background-color: var(--search-background);
+    color: var(--search-text);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Placeholder text color */
+#search::placeholder {
+    color: var(--search-placeholder);
+    transition: color 0.3s;
+}
+
+/* Updated styles for download items */
+.download-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--section-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--box-shadow);
+    border: 1px solid var(--section-border);
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.download-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.download-image {
+    max-width: 200px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.download-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.right-image {
+    margin-left: 20px;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+@media (max-width: 768px) {
+    #about-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right-image {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #3d6166;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.button:hover {
+    background-color: var(--link-hover-background);
+}

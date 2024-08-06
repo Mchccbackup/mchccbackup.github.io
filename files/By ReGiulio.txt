@@ -1,0 +1,15 @@
+Hi, ReGiulio speaking, if you are here you're probabbly searching through the code, i know this website is extremely basic and being hold by scotch tape so please don't roast the shit out of me, instead dm me on how i could improve it, and consider this was developed by an italian small C/C++ developer  with little to no experience with css and html.
+
+TO DO list:
+1.  add a filter system for the clients (coming soon after the release)
+2.  make the images work regardless of their position
+3.  add a comment system for each client 
+4.  make a little showcase for each client (coming soon after the release)
+5.  create someway for a user to upload his own cracks with the rest of the community on the website
+6.  create a review system for each client
+7.  add more clients (coming very soon after the release, i wanted to release the websiter with the most requested clients for now, the rest are coming soon)
+8.  collab with other archives and crackers
+9.  create a custom plugin with backdoor without using openbukloit (unsure)
+10. improve the code
+11. create a custom client (probable, using liquidbounce nextgen as a base, don't expect anything crazy)
+12. promoting free hack clients (idea from Wonderland archive)

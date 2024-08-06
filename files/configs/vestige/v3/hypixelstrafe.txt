@@ -1,0 +1,303 @@
+State:Killaura:false
+Setting:Killaura:Mode:Single
+Setting:Killaura:Filter:Range
+Setting:Killaura:Rotations:Normal
+Setting:Killaura:Random amount:4.0
+Setting:Killaura:Starting range:3.8
+Setting:Killaura:Range:3.8
+Setting:Killaura:Rotation range:4.1
+Setting:Killaura:Raycast:Disabled
+Setting:Killaura:Attack delay mode:Delay in ticks
+Setting:Killaura:Min APS:10
+Setting:Killaura:Max APS:10
+Setting:Killaura:Attack delay:2
+Setting:Killaura:Fail rate:0
+Setting:Killaura:Hurt time:6
+Setting:Killaura:Autoblock:Spoof
+Setting:Killaura:No hit on first tick:true
+Setting:Killaura:Block timing:Pre
+Setting:Killaura:Blink ticks:3
+Setting:Killaura:Block hurt time:10
+Setting:Killaura:While target not looking:true
+Setting:Killaura:Slowdown:Enabled
+Setting:Killaura:While hitting:false
+Setting:Killaura:While speed enabled:true
+Setting:Killaura:Keep Sprint:true
+Setting:Killaura:Move fix:Disabled
+Setting:Killaura:Delay transactions:false
+Setting:Killaura:While inventory opened:false
+Setting:Killaura:While scaffold opened:false
+Setting:Killaura:While using breaker:false
+Setting:Killaura:Players:true
+Setting:Killaura:Animals:false
+Setting:Killaura:Monsters:false
+Setting:Killaura:Invisibles:false
+Setting:Killaura:Attack dead:false
+State:Velocity:true
+Setting:Velocity:Mode:Hypixel
+Setting:Velocity:Horizontal:0
+Setting:Velocity:Vertical:100
+State:Target Strafe:true
+Setting:Target Strafe:Max range:2.2
+Setting:Target Strafe:While pressing space:true
+State:Teams:false
+State:Backtrack:false
+Setting:Backtrack:Delay:500
+Setting:Backtrack:Min range:2.8
+Setting:Backtrack:Delay ping:true
+Setting:Backtrack:Delay velocity:true
+State:Tickbase:false
+Setting:Tickbase:Ticks:2
+State:Reach:false
+Setting:Reach:Starting reach:3.5
+Setting:Reach:Reach:3.5
+State:Autoclicker:false
+Setting:Autoclicker:Min CPS:6
+Setting:Autoclicker:Max CPS:20
+State:AimAssist:false
+Setting:AimAssist:Filter:Range
+Setting:AimAssist:Range:4.5
+Setting:AimAssist:Speed:40
+State:Delay Remover:true
+State:WTap:false
+Setting:WTap:Mode:Legit
+State:Criticals:false
+Setting:Criticals:Mode:Packet
+Setting:Criticals:Hurt time:2
+Setting:Criticals:Normal gravity:true
+Setting:Criticals:XZ motion mult:1.0
+State:Antibot:false
+Setting:Antibot:Ticks existed:0
+Setting:Antibot:Advanced detection:true
+Setting:Antibot:Debug:true
+State:Sprint:true
+State:Fly:false
+Setting:Fly:Mode:Velocity
+Setting:Fly:Vanilla Mode:Creative
+Setting:Fly:Vanilla speed:1.0
+Setting:Fly:Vanilla vertical speed:1.0
+Setting:Fly:NCP Mode:Old
+Setting:Fly:NCP speed:0.3
+Setting:Fly:Damage:false
+Setting:Fly:Velocity Mode:Bow2
+Setting:Fly:Legit:false
+Setting:Fly:Automated:true
+State:Speed:false
+Setting:Speed:Mode:Watchdog
+Setting:Speed:Vanilla speed:1.0
+Setting:Speed:Autojump:true
+Setting:Speed:NCP Mode:Updated Hop
+Setting:Speed:Damage Boost:false
+Setting:Speed:Watchdog Mode:Strafe
+Setting:Speed:Fast:true
+Setting:Speed:Mult:1.215
+Setting:Speed:Speed pot mult:1.24
+Setting:Speed:Attribute speed offground:0.023
+Setting:Speed:Full scaffold:false
+Setting:Speed:All directions sprint:true
+Setting:Speed:Min hurttime:10
+Setting:Speed:Sprint:true
+Setting:Speed:Rotate:true
+Setting:Speed:Ground Strafe:false
+Setting:Speed:Velocity handling:Vertical
+Setting:Speed:Client speed:Custom
+Setting:Speed:Custom client speed:0.4
+Setting:Speed:Fake fly:false
+Setting:Speed:Render box at real pos:true
+Setting:Speed:Timer mode:None
+Setting:Speed:Custom timer:1.0
+State:Longjump:false
+Setting:Longjump:Mode:Self damage
+Setting:Longjump:Motion Y:0.4
+Setting:Longjump:Speed:1.0
+Setting:Longjump:Stop movement:true
+Setting:Longjump:Waiting ticks:10
+Setting:Longjump:Horizontal move:Ignore
+Setting:Longjump:Horizontal boost amount:0.2
+Setting:Longjump:After velocity Y boost:0.028
+State:Inventory Move:false
+Setting:Inventory Move:No sprint:Disabled
+Setting:Inventory Move:Blink:false
+State:Noslow:true
+Setting:Noslow:Sword method:None
+Setting:Noslow:Comsumable method:Hypixel
+Setting:Noslow:Forward:0.2
+Setting:Noslow:Strafe:0.2
+Setting:Noslow:Blink ticks:5
+Setting:Noslow:Allow sprinting:false
+State:Blink:false
+Setting:Blink:Suspend position only:false
+Setting:Blink:Stack velocity:true
+State:Safewalk:false
+Setting:Safewalk:Offground:false
+State:Step:false
+Setting:Step:Mode:Vanilla
+Setting:Step:Height:1.0
+Setting:Step:Timer:1.0
+State:Chest Stealer:false
+Setting:Chest Stealer:Delay:2
+Setting:Chest Stealer:Filter:true
+Setting:Chest Stealer:Autoclose:true
+Setting:Chest Stealer:Gui detect:true
+State:Inventory Manager:false
+Setting:Inventory Manager:Delay:1
+Setting:Inventory Manager:Sword slot:0
+Setting:Inventory Manager:Axe slot:2
+Setting:Inventory Manager:Pickaxe slot:3
+Setting:Inventory Manager:Shovel slot:4
+Setting:Inventory Manager:Block stack slot:1
+Setting:Inventory Manager:Golden apples slot:5
+State:Nofall:false
+Setting:Nofall:Mode:Blink
+Setting:Nofall:Blink ticks:12
+Setting:Nofall:Suspend all packets:true
+State:Antivoid:false
+Setting:Antivoid:Mode:Flag
+Setting:Antivoid:Stop horizontal move:false
+Setting:Antivoid:Bounce motion:1.4
+Setting:Antivoid:Min fall dist:3.0
+State:Timer:false
+Setting:Timer:Speed:1.0
+State:Fastplace:false
+Setting:Fastplace:Delay:Every tick on render
+State:AutoTool:false
+Setting:AutoTool:Item spoof:true
+State:Autoplace:false
+Setting:Autoplace:Place under while offground:false
+State:Scaffold:false
+Setting:Scaffold:Rotations timing:Always
+Setting:Scaffold:Rotations mode:Normal
+Setting:Scaffold:Rot change over air:false
+Setting:Scaffold:Randomised:false
+Setting:Scaffold:Yaw offset:180
+Setting:Scaffold:Pitch:81.5
+Setting:Scaffold:No sprint timing:Always
+Setting:Scaffold:No sprint:Normal
+Setting:Scaffold:Raytrace:Disabled
+Setting:Scaffold:Negative expand:0.0
+Setting:Scaffold:Offground negative expand:0.0
+Setting:Scaffold:Delay between placements:2
+Setting:Scaffold:Sneak over air:false
+Setting:Scaffold:Move fix:false
+Setting:Scaffold:Strafe:true
+Setting:Scaffold:Off ground strafe:Keep movement
+Setting:Scaffold:Speed:0.255
+Setting:Scaffold:Over air speed:0.0
+Setting:Scaffold:Offground speed:0.16
+Setting:Scaffold:Speed pot extra:0.01
+Setting:Scaffold:Randomised speed:true
+Setting:Scaffold:Jump:Hypixel
+Setting:Scaffold:Range:2
+Setting:Scaffold:Tower:None
+Setting:Scaffold:Block picker:Spoof
+Setting:Scaffold:No swing:true
+State:AutoBridge:false
+Setting:AutoBridge:Mode:No sprint
+Setting:AutoBridge:Always rotate offground:false
+Setting:AutoBridge:Ninja bridge:true
+Setting:AutoBridge:Eagle:false
+Setting:AutoBridge:Freelook:true
+Setting:AutoBridge:Block picker:Spoof
+State:Breaker:false
+Setting:Breaker:Range:4
+Setting:Breaker:Rotate:true
+Setting:Breaker:Move fix:true
+Setting:Breaker:Hypixel:true
+State:Watermark:true
+Setting:Watermark:Pos X:4.0
+Setting:Watermark:Pos Y:5.0
+Setting:Watermark:Mode:New
+State:Module List:true
+Setting:Module List:Pos X:6.0
+Setting:Module List:Pos Y:5.0
+Setting:Module List:Mode:Simple
+Setting:Module List:Font:Minecraft
+Setting:Module List:Animation duration:250
+Setting:Module List:Vertical spacing:10.5
+Setting:Module List:Box:true
+Setting:Module List:Extra width:1.5
+Setting:Module List:Box alpha:90
+Setting:Module List:Left outline:true
+Setting:Module List:Right outline:true
+Setting:Module List:Top outline:true
+Setting:Module List:Bottom outline:true
+State:Ingame Info:true
+Setting:Ingame Info:Font:Minecraft
+Setting:Ingame Info:BPS:true
+Setting:Ingame Info:Balance:true
+State:Client theme:false
+Setting:Client theme:Color:Custom fade
+Setting:Client theme:Red:0
+Setting:Client theme:Green:0
+Setting:Client theme:Blue:255
+Setting:Client theme:Red 2:0
+Setting:Client theme:Green 2:255
+Setting:Client theme:Blue 2:255
+Setting:Client theme:Red 3:255
+Setting:Client theme:Green 3:255
+Setting:Client theme:Blue 3:255
+Setting:Client theme:Saturation:0.9
+Setting:Client theme:Brightness:0.9
+State:ClickGUI:false
+Setting:ClickGUI:Color:Custom static
+Setting:ClickGUI:Red:0
+Setting:ClickGUI:Green:100
+Setting:ClickGUI:Blue:230
+Setting:ClickGUI:Red 2:255
+Setting:ClickGUI:Green 2:255
+Setting:ClickGUI:Blue 2:255
+Setting:ClickGUI:Red 3:255
+Setting:ClickGUI:Green 3:255
+Setting:ClickGUI:Blue 3:255
+Setting:ClickGUI:Saturation:0.85
+Setting:ClickGUI:Brightness:0.85
+Setting:ClickGUI:Box on hover:false
+Setting:ClickGUI:Box on settings:false
+State:ESP:false
+Setting:ESP:Line width:2.0
+Setting:ESP:Alpha:0.8
+Setting:ESP:Render invisibles:false
+State:Chams:true
+State:Animations:false
+Setting:Animations:Swing slowdown:2.2
+State:Rotations:true
+Setting:Rotations:Smooth:true
+State:TargetHUD:true
+Setting:TargetHUD:Pos X:406.0
+Setting:TargetHUD:Pos Y:274.0
+Setting:TargetHUD:Mode:Normal
+Setting:TargetHUD:Font:Product sans
+Setting:TargetHUD:Animation duration:400
+Setting:TargetHUD:Healh bar delay:150
+Setting:TargetHUD:Rounded health:true
+State:Keystrokes:false
+Setting:Keystrokes:Pos X:12.0
+Setting:Keystrokes:Pos Y:31.0
+Setting:Keystrokes:Font:Minecraft
+State:Freelook:false
+State:Time Changer:false
+Setting:Time Changer:Custom time:18000.0
+State:Fullbright:false
+State:NameProtect:false
+State:Xray:false
+State:Disabler:false
+Setting:Disabler:Mode:Watchdog inventory
+Setting:Disabler:Strict:false
+Setting:Disabler:Blink ticks:6
+Setting:Disabler:Delay:500
+Setting:Disabler:S08:false
+Setting:Disabler:Balance:false
+Setting:Disabler:No Sprint:false
+Setting:Disabler:No Sneak:false
+Setting:Disabler:Silent teleport accept:true
+Setting:Disabler:Silent range:7.5
+State:Strafe Converter:true
+Setting:Strafe Converter:Allow hitting offground:false
+Setting:Strafe Converter:Update on velocity:false
+Setting:Strafe Converter:No sprint spoof:true
+Setting:Strafe Converter:Render mode:Box
+State:Anticheat:false
+State:Autoplay:true
+Setting:Autoplay:Mode:Solo insane
+Setting:Autoplay:Delay:2500
+State:Self Destruct:false
