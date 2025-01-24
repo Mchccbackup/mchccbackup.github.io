@@ -12,15 +12,30 @@
 </head>
 <body>
     <header>
-        <h1>To Do list</h1>
-        <button id="dark-mode-toggle">Switch to Dark Mode</button>
+        <h1>To do list</h1>
+        <button id="dark-mode-toggle" aria-label="Toggle light/dark theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+                <circle cx="12" cy="12" r="5" fill="#FFC107"/>
+                <line x1="12" y1="1" x2="12" y2="4" stroke="#FFC107" stroke-width="2"/>
+                <line x1="12" y1="20" x2="12" y2="23" stroke="#FFC107" stroke-width="2"/>
+                <line x1="4" y1="4" x2="6.34" y2="6.34" stroke="#FFC107" stroke-width="2"/>
+                <line x1="17.66" y1="17.66" x2="20" y2="20" stroke="#FFC107" stroke-width="2"/>
+                <line x1="1" y1="12" x2="4" y2="12" stroke="#FFC107" stroke-width="2"/>
+                <line x1="20" y1="12" x2="23" y2="12" stroke="#FFC107" stroke-width="2"/>
+                <line x1="4" y1="20" x2="6.34" y2="17.66" stroke="#FFC107" stroke-width="2"/>
+                <line x1="17.66" y1="6.34" x2="20" y2="4" stroke="#FFC107" stroke-width="2"/>
+            </svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+                <path d="M12 2C10.22 2 8.54 2.81 7.12 4.12C5.7 5.43 4.91 7.28 5.02 9.18C5.05 9.75 5.26 10.24 5.61 10.64C6.08 11.14 6.93 11.5 7.79 11.5C8.15 11.5 8.5 11.39 8.82 11.2C9.43 11.65 10.21 12 11 12C14.97 12 18 8.97 18 5C18 4.11 17.93 3.25 17.83 2.41C16.43 2.95 15.02 3.5 13.59 4.06C13.03 3.58 12.51 3.18 12 2Z" fill="#3F51B5"/>
+            </svg>
+        </button>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="downloadc.html">Download</a></li>
                 <li><a href="wallofclowns.html">Clowns</a></li>
+                <li><a href="donate.html">Donate</a></li>
             </ul>
         </nav>
     </header>

@@ -13,13 +13,29 @@
 <body>
     <header>
         <h1>MCHCC Archive</h1>
-        <button id="dark-mode-toggle">Switch to Dark Mode</button>
+        <button id="dark-mode-toggle" aria-label="Toggle light/dark theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+                <circle cx="12" cy="12" r="5" fill="#FFC107"/>
+                <line x1="12" y1="1" x2="12" y2="4" stroke="#FFC107" stroke-width="2"/>
+                <line x1="12" y1="20" x2="12" y2="23" stroke="#FFC107" stroke-width="2"/>
+                <line x1="4" y1="4" x2="6.34" y2="6.34" stroke="#FFC107" stroke-width="2"/>
+                <line x1="17.66" y1="17.66" x2="20" y2="20" stroke="#FFC107" stroke-width="2"/>
+                <line x1="1" y1="12" x2="4" y2="12" stroke="#FFC107" stroke-width="2"/>
+                <line x1="20" y1="12" x2="23" y2="12" stroke="#FFC107" stroke-width="2"/>
+                <line x1="4" y1="20" x2="6.34" y2="17.66" stroke="#FFC107" stroke-width="2"/>
+                <line x1="17.66" y1="6.34" x2="20" y2="4" stroke="#FFC107" stroke-width="2"/>
+            </svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+                <path d="M12 2C10.22 2 8.54 2.81 7.12 4.12C5.7 5.43 4.91 7.28 5.02 9.18C5.05 9.75 5.26 10.24 5.61 10.64C6.08 11.14 6.93 11.5 7.79 11.5C8.15 11.5 8.5 11.39 8.82 11.2C9.43 11.65 10.21 12 11 12C14.97 12 18 8.97 18 5C18 4.11 17.93 3.25 17.83 2.41C16.43 2.95 15.02 3.5 13.59 4.06C13.03 3.58 12.51 3.18 12 2Z" fill="#3F51B5"/>
+            </svg>
+        </button>
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="downloadc.html">Download</a></li>
                 <li><a href="wallofclowns.html">Clowns</a></li>
+                <li><a href="donate.html">Donate</a></li>
             </ul>
         </nav>
     </header>
@@ -29,9 +45,28 @@
             <p>Hi, I'm ReGiulio, the developer and owner of MCHCC. MCHCC is a Minecraft hack client archive, here you'll find every client you can think of, with its configs and source code.</p>
             <p>Our objective is to make the best experience possible, making it as easy as ever to safely download hack clients for Minecraft.</p>
         </section>
+        <section id="download">
+            <h2>RIP Stella</h2>
+            <h1>2013-13th January 2025</h1>
+            <img src="stellaslastpic.png">
+        </section>
         <section id="changelog">
             <h2>Changelog</h2>
             <article class="changelog-entry">
+                <h3>Version beta 0.4 b1 - 2025-1-24</h3>
+                <ul>
+                    <li>Stella's memorial.</li>
+                    <li>Restyled the site.</li>
+                    <li>Added proper mobile support.</li>
+                    <li>Added a shit ton of clients.</li>
+                    <li>Added a Donation page.</li>
+                    <li>Added PlutoSolutions cracks.</li>
+                    <li>Added John Xina cracks.</li>
+                    <li>Added WalmartSolution cracks.</li>
+                    <li>Expanded <a href="wallofclowns.html">wall of clowns</a>.</li>
+                    <li>Added back the infected plugins.</li>
+                    <li>Somehow fucked up search functionality in Download page, will be fixed asap.</li>
+                </ul>
 
                 <h3>Version beta 0.3 - 2024-08-25</h3>
                 <ul>
@@ -49,15 +84,18 @@
                     <li>Updated Acrimony.</li>
                     <li>Fixed Flashbang bug.</li>
                     <li>Working on big features that will appear in future versions</li>
-
                 </ul>
-
                 <h3>Version beta 0.2 - 2024-08-06</h3>
                 <ul>
                     <li>Site reuploaded after it got taken down (on 5/8/24).</li>
                     <li>For the people that took down the site, <a href="announcements.html">read this</a>.</li>
                 </ul>
             </article>
+        </section>
+        <section>
+            <h2>Donate</h2>
+            <p>Consider donating to help fund this project.</p>
+            <a href="donate.html" class="button">Donate</a>
         </section>
         <section id="download"> 
             <h2>Download Clients</h2>

@@ -1,55 +1,96 @@
-/* Variables for light and dark modes */
+/* Variables */
 :root {
-    --background-color: #fafafa;
-    --text-color: #333333;
-    --header-footer-background: #e0e0e0;
-    --header-footer-text: #333333;
-    --link-hover-background: #d4d4d4;
-    --section-background: #ffffff;
-    --section-border: #cccccc;
-    --box-shadow: rgba(0, 0, 0, 0.1);
-    --search-background: #ddd;
-    --search-text: #333;
-    --search-placeholder: #999;
+    --background-color: #ffffff; /* White background for light mode */
+    --text-color: #000000; /* Black text for light mode */
+    --header-footer-bg: #f8f9fa; /* Light header/footer background */
+    --header-footer-text: #000000; /* Black text for header/footer in light mode */
+    --link-hover-bg: #e0e0e0; /* Light gray hover for links */
+    --section-bg: #fdfdfd; /* Light section background */
+    --section-border: #e5e5e5; /* Light gray border for sections */
+    --box-shadow: rgba(0, 0, 0, 0.1); /* Subtle shadow for sections in light mode */
+    --search-bg: #f5f5f5; /* Light search bar background */
+    --search-text: #333333; /* Dark search text */
+    --search-placeholder: #888888; /* Gray placeholder text */
 }
 
 body.dark-mode {
-    --background-color: #121212;
-    --text-color: #a3a3a3;
-    --header-footer-background: #1f1f1f;
-    --link-hover-background: #333;
-    --section-background: #1f1f1f;
-    --section-border: #333;
-    --box-shadow: rgba(255, 255, 255, 0.1);
-    --search-background: #333;
-    --search-text: #fff;
-    --search-placeholder: #ddd;
+    --background-color: #121212; /* Dark mode background */
+    --text-color: #a3a3a3; /* Light text for dark mode */
+    --header-footer-bg: #1f1f1f; /* Dark header/footer background */
+    --header-footer-text: #ffffff; /* White text for header/footer in dark mode */
+    --link-hover-bg: #333; /* Dark link hover background */
+    --section-bg: #1f1f1f; /* Dark section background */
+    --section-border: #333; /* Dark section border */
+    --box-shadow: rgba(255, 255, 255, 0.1); /* Light shadow for dark mode */
+    --search-bg: #333; /* Dark search bar background */
+    --search-text: #fff; /* White search text color */
+    --search-placeholder: #ddd; /* Light gray search placeholder */
 }
 
-/* Basic styles */
+body.dark-mode section {
+    border: none; /* Remove the border in dark mode */
+}
+
+/* Basic Styles */
 body, h1, h2, h3, p {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--text-color);
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    font-size: 1rem;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 body {
     background-color: var(--background-color);
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, opacity 0.5s ease;
+    opacity: 1;
+}
+
+/* Page Transitions */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards ease-in;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 0.5s forwards ease-out;
 }
 
 /* Header and Footer */
 header, footer {
-    background-color: var(--header-footer-background);
+    background-color: var(--header-footer-bg);
     color: var(--header-footer-text);
     text-align: center;
-    padding: 15px 0;
-    box-shadow: 0 4px 6px var(--box-shadow);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
+    font-size: 0.9rem;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -65,110 +106,229 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
-    color: var(--header-footer-text);
-    transition: background-color 0.3s ease;
+    color: var(--header-footer-text); /* Use header/footer text color for links */
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: var(--link-hover-background);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
+    opacity: 0.8;
 }
 
-/* Main and Sections */
+/* Main Sections */
 main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; /* Reduced space between sections */
     padding: 20px;
     max-width: 1200px;
     margin: 60px auto 0;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 20px;
-    background-color: var(--section-background);
+    background-color: var(--section-bg);
     border-radius: 10px;
-    box-shadow: 0 10px 15px -3px var(--box-shadow), 0 4px 6px -2px var(--box-shadow);
-    border: 1px solid var(--section-border);
-    transition: background-color 0.3s, border 0.3s;
+    box-shadow: 0 4px 10px var(--box-shadow); /* Default shadow */
+    border: 1px solid var(--section-border); /* Light gray border for visibility in light mode */
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in;
+    transition: opacity 0.5s ease, background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Include box-shadow in transition */
 }
 
-/* Download Button Styling */
-a[download] {
+section:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25); /* Increased shadow on hover */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Button Styling */
+.button, a[download] {
     display: inline-block;
-    padding: 10px 20px;
-    color: #3d6166;
-    background-color: var(--header-footer-background);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-a[download]:hover {
-    background-color: var(--link-hover-background);
-}
-
-/* Custom download section styles */
-#download-src {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: var(--section-background);
-    padding: 20px;
-    border: 1px solid var(--section-border);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px var(--box-shadow);
-    transition: background-color 0.3s, border 0.3s;
-}
-
-#download-src li a,
-#discord li a {
-    display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     color: var(--text-color);
-    background-color: var(--header-footer-background);
+    background-color: var(--section-bg);
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border: 1px solid var(--section-border); /* Light gray border for visibility in light mode */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in;
+    transition: all 0.3s ease, opacity 0.5s ease;
 }
 
-#download-src li a:hover,
-#discord li a:hover {
-    background-color: var(--link-hover-background);
+.button:hover, a[download]:hover {
+    background-color: var(--link-hover-bg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    opacity: 0.9;
 }
 
-/* Other button styles */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #3d6166;
-    background-color: var(--header-footer-background);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: var(--link-hover-background);
-}
-
-/* Dark mode toggle */
+/* Dark Mode Toggle */
 #dark-mode-toggle {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 10px 20px;
-    background-color: var(--header-footer-background);
+    top: 20px;
+    right: 20px;
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, opacity 0.5s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in;
+}
+
+body.dark-mode .button, body.dark-mode a[download] {
+    border: none; /* Remove the border in dark mode */
 }
 
 #dark-mode-toggle:hover {
-    background-color: var(--link-hover-background);
+    background-color: var(--link-hover-bg);
+    opacity: 0.9;
+}
+
+#sun-icon, #moon-icon {
+    width: 24px;
+    height: 24px;
+    transition: display 0.3s ease;
+}
+
+/* Responsive Styling */
+
+/* Mobile */
+@media (max-width: 600px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.3rem; }
+    p, a { font-size: 0.9rem; }
+
+    .button, a[download] {
+        padding: 10px 15px;
+    }
+
+    #search {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 600px) and (max-width: 1024px) {
+    header {
+        padding: 15px;
+    }
+
+    nav ul li {
+        margin: 10px;
+    }
+
+    main {
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.7rem; }
+    p, a { font-size: 1.1rem; }
+
+    .button, a[download] {
+        padding: 10px 20px;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+    header {
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 15px;
+    }
+
+    main {
+        max-width: 1200px;
+        margin-top: 60px;
+        padding: 20px;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    p, a { font-size: 1.2rem; }
+
+    .button, a[download] {
+        padding: 12px 24px;
+    }
+}
+
+/* Search Bar Styling */
+#search {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid var(--section-border);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: var(--search-bg);
+    color: var(--search-text);
+}
+
+#search::placeholder {
+    color: var(--search-placeholder);
+}
+
+
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }

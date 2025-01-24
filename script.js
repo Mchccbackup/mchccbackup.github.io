@@ -1,22 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('dark-mode-toggle');
     const body = document.body;
-    const audio = new Audio('C:/Users/Giuli0/Documents/GitHub/mchcc.github.io/files/funny sound.ogg'); // Ensure the path to your sound file is correct
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('nav ul');
 
-    // Function to update the button label based on the current theme
-    const updateButtonLabel = () => {
-        toggleButton.textContent = body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    
+
+    // Function to update button icon based on the current theme
+    const updateButtonIcon = () => {
+        const isDarkMode = body.classList.contains('dark-mode');
+        sunIcon.style.display = isDarkMode ? 'none' : 'block';
+        moonIcon.style.display = isDarkMode ? 'block' : 'none';
     };
 
-    // Function to toggle the dark mode
+    // Function to toggle dark mode
     const toggleDarkMode = () => {
         body.classList.toggle('dark-mode');
-        updateButtonLabel();
-        // Save the current mode in local storage
+        updateButtonIcon();
         localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
     };
 
-    // Load the saved theme from local storage
+    // Load saved theme from local storage
     const loadSavedTheme = () => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
@@ -24,42 +30,51 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             body.classList.remove('dark-mode');
         }
-        updateButtonLabel();
+        updateButtonIcon();
     };
 
-    // Event listener for dark mode toggle button
-    toggleButton.addEventListener('click', toggleDarkMode);
+    // Function to handle page transitions with fade effects
+    const handlePageTransition = (event) => {
+        const target = event.currentTarget;
+        if (target.tagName === 'A') {
+            event.preventDefault();
+            const href = target.getAttribute('href');
 
-    // Event listener for search functionality
-    document.getElementById('search').addEventListener('input', (e) => {
-        const search = e.target.value.toLowerCase();
-        const sections = document.getElementsByTagName('section');
-        for (let section of sections) {
-            const text = section.textContent.toLowerCase();
-            section.style.display = text.includes(search) ? '' : 'none';
+            body.classList.remove('fade-in');
+            body.classList.add('fade-out');
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500);
         }
-    });
+    };
 
-    // Event listener to play sound on any button click
-    document.addEventListener('click', (e) => {
-        if (e.target.tagName === 'BUTTON') {
-            audio.play();
-        }
-    });
+    // Function to toggle mobile navigation menu
+    const toggleNavMenu = () => {
+        navMenu.classList.toggle('show');
+    };
 
-    // Initialize the theme on page load
+    // Initialize
     loadSavedTheme();
+    body.classList.add('fade-in');
+
+    // Add event listeners
+    toggleButton.addEventListener('click', toggleDarkMode);
+    menuToggle.addEventListener('click', toggleNavMenu);
+    
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', handlePageTransition);
+    });
+
+    
+
 });
 
-// Apply the theme as soon as possible
-const applySavedTheme = () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-    } else {
-        document.body.classList.remove('dark-mode');
+document.getElementById('search').addEventListener('input', (e) => {
+    const search = e.target.value.toLowerCase();
+    const sections = document.getElementsByTagName('section');
+    for (let section of sections) {
+        const text = section.textContent.toLowerCase();
+        section.style.display = text.includes(search) ? '' : 'none';
     }
-};
-
-// Execute as soon as the script loads
-applySavedTheme();
+});
